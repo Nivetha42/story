@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+<welcome-file-list>
+    <welcome-file>Login/Index.jsp</welcome-file>
+</welcome-file-list>
+	<servlet>
+        <servlet-name>getStatesServlet</servlet-name>
+        <servlet-class>com.example.trackova.dao.GetStates</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getStatesServlet</servlet-name>
+        <url-pattern>/Admin/getStates</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>getDistrictServlet</servlet-name>
+        <servlet-class>com.example.trackova.dao.GetDistricts</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDistrictServlet</servlet-name>
+        <url-pattern>/Admin/getDistricts</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>getAllStudentsServlet</servlet-name>
+        <servlet-class>com.example.trackova.dao.GetStudentDetails</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllStudentsServlet</servlet-name>
+        <url-pattern>/Admin/fetchStudentDetails</url-pattern>
+    </servlet-mapping>
+    
+     
+    <servlet>
+        <servlet-name>addStudentServlet</servlet-name>
+        <servlet-class>com.example.trackova.dao.AddStudentDetail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addStudentServlet</servlet-name>
+        <url-pattern>/Admin/addStudent</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>getStudentServlet</servlet-name>
+        <servlet-class>com.example.trackova.dao.GetStudentDetail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getStudentServlet</servlet-name>
+        <url-pattern>/Admin/getStudentDetails</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>updateStudentServlet</servlet-name>
+        <servlet-class>com.example.trackova.dao.UpdateStudentDetail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateStudentServlet</servlet-name>
+        <url-pattern>/Admin/updateStudent</url-pattern>
+    </servlet-mapping>
+    
+    
+</web-app>
